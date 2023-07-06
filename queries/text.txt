@@ -1,8 +1,0 @@
-select *,
-	case 
-		when score>=85 then 'A'
-		when score>=65 and score<85 then 'B'
-		when score>=45 and score<65 then 'C'
-		when score<45 then 'D'
-	end as 'Grade'
-from student
