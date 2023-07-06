@@ -1,0 +1,54 @@
+1. Select values such that the students have failed including students whose mark field is NULL
+    SELECT * FROM student WHERE score<40 OR score IS NULL
+
+2. Select fields with the value NULL
+    SELECT * FROM student WHERE score IS NULL
+
+3. varchar out of bounds situation: handled using varchar(max)
+    DECLARE @value VARCHAR(max)='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    SELECT DATALENGTH(@value)
+
+4. Insert Malayalam name in table
+    CREATE TABLE lang
+    (
+	    EnglishName VARCHAR(50) not null,
+	    MalayalamName NVARCHAR(50) not null
+    )
+    INSERT INTO lang VALUES ('Ruby',N'റൂബി')
+    INSERT INTO lang VALUES ('Reenu',N'റീനു')
+    SELECT * FROM lang
+
+5. Auto increment primary key value: using IDENTITY
+    CREATE TABLE Book
+    (
+        Bid INT not null IDENTITY PRIMARY KEY,
+        Bname VARCHAR(30),
+        AuthorId INT not null,
+        ISBN INT,
+        Price FLOAT,
+        Genre VARCHAR(30),
+        Quantity INT,
+        CreatedOn DATETIME DEFAULT CURRENT_TIMESTAMP,	
+    )
+
+6. “created on” field which autogenerates the date and time when each record was inserted : using DEFAULT CURRENT_TIMESTAMP
+    CREATE TABLE Book
+    (
+        Bid INT not null IDENTITY PRIMARY KEY,
+        Bname VARCHAR(30),
+        AuthorId INT not null,
+        ISBN INT,
+        Price FLOAT,
+        Genre VARCHAR(30),
+        Quantity INT,
+        CreatedOn DATETIME DEFAULT CURRENT_TIMESTAMP,	
+    )
+    CREATE TABLE Author
+    (
+
+        AuthorId INT not null PRIMARY KEY,
+        Aname VARCHAR(30),
+        Bid INT not null,
+        CreatedOn DATETIME DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY(Bid) REFERENCES Book	
+    )
