@@ -1,0 +1,10 @@
+1. Display the last incremented id value (identity primary key)
+    SELECT IDENT_CURRENT('Book')
+
+2. Display date in DD-MM-YYYY format
+    SELECT FORMAT(getdate(), 'dd-MM-yyyy')
+
+3. Declare an attribute of datatype datetime and display only the date
+    SELECT CONVERT(date,getdate()) //using convert function
+    SELECT CAST(GETDATE() AS DATE) //using cast function
+    
