@@ -1,0 +1,99 @@
+//created database
+	CREATE DATABASE OnlineBookStore 
+
+//created tables
+	CREATE TABLE Book
+	(
+		Bid INT not null IDENTITY PRIMARY KEY,
+		Bname VARCHAR(30),
+		AuthorId INT not null,
+		ISBN VARCHAR(50),
+		Price FLOAT,
+		Genre VARCHAR(30),
+		Quantity INT,
+		CreatedOn DATETIME DEFAULT CURRENT_TIMESTAMP	
+	)
+	CREATE TABLE Author
+	(
+
+		AuthorId INT not null PRIMARY KEY,
+		Aname VARCHAR(30),
+		Bid INT not null,
+		CreatedOn DATETIME DEFAULT CURRENT_TIMESTAMP	
+	)
+	CREATE TABLE Publisher
+	(
+
+		Pid INT not null PRIMARY KEY,
+		Pname VARCHAR(30),
+		Bid INT not null,
+		CreatedOn DATETIME DEFAULT CURRENT_TIMESTAMP	
+	)
+	CREATE TABLE Customer
+	(
+
+		CustId INT not null PRIMARY KEY,
+		CustName VARCHAR(30),
+		Address1 VARCHAR(max),
+		Address2 VARCHAR(max),
+		Phone INT,
+		CreatedOn DATETIME DEFAULT CURRENT_TIMESTAMP
+	)
+	CREATE TABLE OrderDetail
+	(
+
+		OrderId INT not null PRIMARY KEY,
+		CustId INT not null,
+		Bid INT not null,
+		OrderDate DATE,
+		Quantity INT,
+		Amount FLOAT,
+		CreatedOn DATETIME DEFAULT CURRENT_TIMESTAMP
+	)
+	CREATE TABLE Payment
+	(
+
+		PayId INT not null PRIMARY KEY,
+		CustId INT not null,
+		OrderId INT not null,
+		CardNo INT,
+		CreatedOn DATETIME DEFAULT CURRENT_TIMESTAMP
+	)
+
+
+//inserting data into tables
+	INSERT INTO Book (Bname,AuthorId,ISBN,Price,Genre,Quantity) VALUES
+	('Maths XII',101,'8193233492',200,'Textbook',30)
+	INSERT INTO Book (Bname,AuthorId,ISBN,Price,Genre,Quantity) VALUES
+	('Wings Of Fire',102,'9788173711',350,'Autobiography',20)
+
+	INSERT INTO Author(AuthorId,Aname,Bid) VALUES
+	(101,'R.D. Sharma',1)
+	INSERT INTO Author(AuthorId,Aname,Bid) VALUES
+	(102,'A. P. J. Abdul Kalam',2)
+
+	INSERT INTO Publisher(Pid,Pname,Bid) VALUES
+	(1001,'NCERT',1),(1002,'University Press',2)
+
+	INSERT INTO Customer(CustId,CustName,Address1,Address2,Phone) VALUES
+	(10001,'Ruby Abraham','Trivandrum','Kerala',902345674),
+	(10002,'Reenu Abraham','Kochi','Kerala',882375600)
+
+	INSERT INTO OrderDetail(OrderId,CustId,Bid,OrderDate,Quantity,Amount) VALUES
+	(201,10001,1,'2023-06-07',2,400),(202,10002,2,'2023-06-07',1,350)
+
+	INSERT INTO Payment(PayId,CustId,OrderId,CardNo) VALUES
+	(301,201,10001,1234567),(302,202,10002,7654321)
+
+//adding foreign key constraints
+	ALTER TABLE Book ADD CONSTRAINT forkey1 FOREIGN KEY (AuthorId) REFERENCES Author(AuthorId)
+
+	ALTER TABLE Author ADD CONSTRAINT forkey2 FOREIGN KEY (Bid) REFERENCES Book(Bid)
+
+	ALTER TABLE Publisher ADD CONSTRAINT forkey3 FOREIGN KEY (Bid) REFERENCES Book(Bid)
+
+	ALTER TABLE OrderDetail ADD CONSTRAINT forkey4 FOREIGN KEY (Bid) REFERENCES Book(Bid)
+	ALTER TABLE OrderDetail ADD CONSTRAINT forkey5 FOREIGN KEY (CustId) REFERENCES Customer(CustId)
+
+	ALTER TABLE Payment ADD CONSTRAINT forkey6 FOREIGN KEY (CustId) REFERENCES Customer(CustId)
+	ALTER TABLE Payment ADD CONSTRAINT forkey7 FOREIGN KEY (OrderId) REFERENCES OrderDetail(OrderId)
