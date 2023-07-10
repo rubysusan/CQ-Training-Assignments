@@ -4,19 +4,19 @@
 //created tables
 	CREATE TABLE Book
 	(
-		Bid INT not null IDENTITY PRIMARY KEY,
+		Bid INT IDENTITY PRIMARY KEY,
 		Bname VARCHAR(30),
 		AuthorId INT not null,
-		ISBN VARCHAR(50),
+		ISBN VARCHAR(50) UNIQUE,
 		Price FLOAT,
 		Genre VARCHAR(30),
-		Quantity INT,
+		Quantity INT CHECK (Quantity>0),
 		CreatedOn DATETIME DEFAULT CURRENT_TIMESTAMP	
 	)
 	CREATE TABLE Author
 	(
 
-		AuthorId INT not null PRIMARY KEY,
+		AuthorId INT PRIMARY KEY,
 		Aname VARCHAR(30),
 		Bid INT not null,
 		CreatedOn DATETIME DEFAULT CURRENT_TIMESTAMP	
@@ -24,7 +24,7 @@
 	CREATE TABLE Publisher
 	(
 
-		Pid INT not null PRIMARY KEY,
+		Pid INT PRIMARY KEY,
 		Pname VARCHAR(30),
 		Bid INT not null,
 		CreatedOn DATETIME DEFAULT CURRENT_TIMESTAMP	
@@ -32,28 +32,28 @@
 	CREATE TABLE Customer
 	(
 
-		CustId INT not null PRIMARY KEY,
+		CustId INT PRIMARY KEY,
 		CustName VARCHAR(30),
 		Address1 VARCHAR(max),
 		Address2 VARCHAR(max),
-		Phone INT,
+		Phone INT UNIQUE,
 		CreatedOn DATETIME DEFAULT CURRENT_TIMESTAMP
 	)
 	CREATE TABLE OrderDetail
 	(
 
-		OrderId INT not null PRIMARY KEY,
+		OrderId INT PRIMARY KEY,
 		CustId INT not null,
 		Bid INT not null,
 		OrderDate DATE,
-		Quantity INT,
+		Quantity INT CHECK (Quantity>0),
 		Amount FLOAT,
 		CreatedOn DATETIME DEFAULT CURRENT_TIMESTAMP
 	)
 	CREATE TABLE Payment
 	(
 
-		PayId INT not null PRIMARY KEY,
+		PayId INT PRIMARY KEY,
 		CustId INT not null,
 		OrderId INT not null,
 		CardNo INT,
