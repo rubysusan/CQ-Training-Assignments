@@ -1,5 +1,5 @@
 1. Display the last incremented id value (identity primary key)
-    SELECT IDENT_CURRENT('Book')
+    SELECT SCOPE_IDENTITY()
 
 
 2. Display date in DD-MM-YYYY format
