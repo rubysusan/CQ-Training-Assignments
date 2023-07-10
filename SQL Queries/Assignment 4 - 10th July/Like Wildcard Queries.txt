@@ -1,0 +1,10 @@
+Question: Search for string with %      //using []
+
+    CREATE TABLE Department
+    (
+            DeptId INT PRIMARY KEY,
+            DeptName VARCHAR(30)
+    )
+    INSERT INTO Department VALUES (111,'cse'),(112,'ec'),(113,'eee'),(114,'m%c')
+
+    SELECT * FROM Department WHERE DeptName LIKE '%[%]%'
