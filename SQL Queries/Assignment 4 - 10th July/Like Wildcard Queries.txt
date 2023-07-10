@@ -1,10 +1,25 @@
-Question: Search for string with %      //using []
+CREATE TABLE Register
+(
+		RegNo INT PRIMARY KEY,
+		RegName VARCHAR(30)
+)
+INSERT INTO Register VALUES (111,'John Matthew'),(112,'Thomas John'),(113,'Mary John Varghese'),(114,'Jane Alex'),(115,'Kathy Aldeor'),(116,'Amy Ann'),(117,'Henry A%lp')
 
-    CREATE TABLE Department
-    (
-            DeptId INT PRIMARY KEY,
-            DeptName VARCHAR(30)
-    )
-    INSERT INTO Department VALUES (111,'cse'),(112,'ec'),(113,'eee'),(114,'m%c')
+QUESTIONS:
+1. Display all records who’s name starts with John
+        SELECT * FROM Register WHERE RegName LIKE 'John%'
 
-    SELECT * FROM Department WHERE DeptName LIKE '%[%]%'
+2. Display all records who’s name ends with John
+        SELECT * FROM Register WHERE RegName LIKE '%John'       
+
+3. Display all records who’s name have John ( can be any where )
+        SELECT * FROM Register WHERE RegName LIKE '%John%'
+
+4. Display all records who’s name starts with A and ends with n
+        SELECT * FROM Register WHERE RegName LIKE 'A%n' 
+
+5. Display all records who have alex or deo any where in name column
+        SELECT * FROM Register WHERE RegName LIKE '%alex%' OR RegName LIKE '%deo%'
+
+6. Display record containing % in the name column
+        SELECT * FROM Register WHERE RegName LIKE '%[%]%'
