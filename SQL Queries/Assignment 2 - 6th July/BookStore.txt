@@ -13,8 +13,7 @@
 		Genre VARCHAR(30),
 		Quantity INT,
 		CreatedOn DATETIME CONSTRAINT DF_Book_CreatedOn DEFAULT CURRENT_TIMESTAMP, 
-		CONSTRAINT PK_Book PRIMARY KEY(Bid),										
-		CONSTRAINT CHK_Book_Quantity CHECK (Quantity>0),										
+		CONSTRAINT PK_Book PRIMARY KEY(Bid),																				
 		CONSTRAINT UQ_Book_ISBN UNIQUE (ISBN)											
 )
 	CREATE TABLE Author
