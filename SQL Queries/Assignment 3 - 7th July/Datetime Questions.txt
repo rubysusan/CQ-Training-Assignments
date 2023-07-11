@@ -23,15 +23,15 @@
     INSERT INTO Employee (FirstName,LastName,Age,JoiningDate) VALUES ('Ruby', 'Abraham',21, '2023-07-03 4:00:00 +00:00');
     INSERT INTO Employee (FirstName,LastName,Age,JoiningDate) VALUES ('Aisha', 'Rahim',21, '2023-07-04 4:00:00 +00:00');
     
-    Select SWITCHOFFSET(JoiningDate,'+05:30') AS Indian_Joining_Time,
-    SWITCHOFFSET(JoiningDate,'-04:00') AS NewYork_Joining_Time from Employee 
+    SELECT JoiningDate AT TIME ZONE 'India Standard Time'AS Indian_Joining_Time, 
+    JoiningDate AT TIME ZONE 'US Eastern Standard Time' AS NewYork_Joining_Time FROM Employee
 
 5.For Book table: 
     i) Display the no. of books arrived during the last year 
-        SELECT * FROM Book WHERE DATEPART(YEAR,BookAddDate)='2022'
+        SELECT COUNT(*) FROM Book WHERE YEAR(BookAddDate)=YEAR(GETDATE())-1
 
     ii) Display the no. of books arrived on every Monday during the last year
-        SELECT * FROM Book WHERE DATEPART(YEAR,BookAddDate)='2022' AND DATENAME(DW,BookAddDate)='Monday'
+        SELECT COUNT(*) FROM Book WHERE YEAR(BookAddDate)=YEAR(GETDATE())-1 AND DATENAME(DW,BookAddDate)='Monday'
 
 
 6. For Employee table: Display the total no. of days each intern has joined
