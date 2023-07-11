@@ -47,15 +47,24 @@
 	(
 
 		OrderId INT,
+		OrderItemId INT,
 		CustId INT not null,
-		Bid INT not null,
 		OrderDate DATE,
-		Quantity INT,
-		Amount FLOAT,
 		CreatedOn DATETIME CONSTRAINT DF_OrderDetail_CreatedOn DEFAULT GETUTCDATE(),
 		CONSTRAINT PK_OrderDetail PRIMARY KEY(OrderId),
-		CONSTRAINT CHK_OrderDetail_Quantity CHECK (Quantity>0)
 	)
+	
+	CREATE TABLE OrderItem
+	(
+
+		OrderItemId INT,
+		Bid INT,
+		Quantity INT,
+		CreatedOn DATETIME CONSTRAINT DF_OrderItem_CreatedOn DEFAULT GETUTCDATE(),
+		CONSTRAINT PK_OrderItem PRIMARY KEY(OrderItemId),
+		CONSTRAINT CHK_OrderItem_Quantity CHECK (Quantity>0)
+	)
+
 	CREATE TABLE Payment
 	(
 
@@ -69,7 +78,7 @@
 
 
 //inserting data into tables
-INSERT INTO Book (Bname,AuthorId,Pid,ISBN,Price,Genre,Quantity) VALUES
+	INSERT INTO Book (Bname,AuthorId,Pid,ISBN,Price,Genre,Quantity) VALUES
 	('Maths XII',101,1001,'8193233492',200,'Textbook',30),('Wings Of Fire',102,1002,'9788173711',350,'Autobiography',20)
 	
 	INSERT INTO Author(AuthorId,AuthorName) VALUES
@@ -81,8 +90,10 @@ INSERT INTO Book (Bname,AuthorId,Pid,ISBN,Price,Genre,Quantity) VALUES
 	INSERT INTO Customer(CustId,CustName,Address1,Address2,Phone) VALUES
 	(10001,'Ruby Abraham','Trivandrum','Kerala',902345674),(10002,'Reenu Abraham','Kochi','Kerala',882375600)
 
-	INSERT INTO OrderDetail(OrderId,CustId,Bid,OrderDate,Quantity,Amount) VALUES
-	(201,10001,1,'2023-06-07',2,400),(202,10002,2,'2023-06-07',1,350)
+	INSERT INTO OrderDetail(OrderId,OrderItemId,CustId,OrderDate) VALUES
+	(201,111,10001,'2023-06-07'),(202,112,10002,'2023-06-07')
+
+	INSERT INTO OrderItem(OrderItemId,Bid,Quantity) VALUES (111,1,2),(112,2,2)
 
 	INSERT INTO Payment(PayId,CustId,OrderId,CardNo) VALUES
 	(301,10001,201,1234567),(302,10002,202,7654321)
@@ -92,8 +103,10 @@ INSERT INTO Book (Bname,AuthorId,Pid,ISBN,Price,Genre,Quantity) VALUES
 	ALTER TABLE Book ADD CONSTRAINT FK_Book_Author FOREIGN KEY (AuthorId) REFERENCES Author(AuthorId)
 	ALTER TABLE Book ADD CONSTRAINT FK_Book_Publisher FOREIGN KEY (Pid) REFERENCES Publisher(Pid)
 
-	ALTER TABLE OrderDetail ADD CONSTRAINT FK_OrderDetail_Book FOREIGN KEY (Bid) REFERENCES Book(Bid)
+	ALTER TABLE OrderDetail ADD CONSTRAINT FK_OrderDetail_OrderItem FOREIGN KEY (OrderItemId) REFERENCES OrderItem(OrderItemId)
 	ALTER TABLE OrderDetail ADD CONSTRAINT FK_OrderDetail_Customer FOREIGN KEY (CustId) REFERENCES Customer(CustId)
+
+	ALTER TABLE OrderItem ADD CONSTRAINT FK_OrderItem_Book FOREIGN KEY (Bid) REFERENCES Book(Bid)     
 
 	ALTER TABLE Payment ADD CONSTRAINT FK_Payment_Customer FOREIGN KEY (CustId) REFERENCES Customer(CustId)
 	ALTER TABLE Payment ADD CONSTRAINT FK_Payment_OrderDetail FOREIGN KEY (OrderId) REFERENCES OrderDetail(OrderId)
