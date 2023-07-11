@@ -6,24 +6,31 @@
 	(
 		Bid INT IDENTITY,					
 		Bname VARCHAR(30),
-		AuthorName VARCHAR(30) not null,			//not null
+		AuthorId INT,	
+		Pid INT,
 		ISBN VARCHAR(50),
 		Price FLOAT,
 		Genre VARCHAR(30),
 		Quantity INT,
-		CreatedOn DATETIME CONSTRAINT DF_Book_CreatedOn DEFAULT CURRENT_TIMESTAMP,  //default
-		CONSTRAINT PK_Book PRIMARY KEY(Bid),										//primary key
-		CONSTRAINT CHK_Book CHECK (Quantity>0),										//check
-		CONSTRAINT UQ_Book UNIQUE (ISBN)											//unique
+		CreatedOn DATETIME CONSTRAINT DF_Book_CreatedOn DEFAULT CURRENT_TIMESTAMP, 
+		CONSTRAINT PK_Book PRIMARY KEY(Bid),										
+		CONSTRAINT CHK_Book_Quantity CHECK (Quantity>0),										
+		CONSTRAINT UQ_Book_ISBN UNIQUE (ISBN)											
+)
+	CREATE TABLE Author
+	(
+		AuthorId INT,
+		AuthorName VARCHAR(30),
+		CreatedOn DATETIME CONSTRAINT DF_Publisher_CreatedOn DEFAULT CURRENT_TIMESTAMP,
+		CONSTRAINT PK_Publisher PRIMARY KEY(AuthorId)	
 	)
 	CREATE TABLE Publisher
 	(
 
 		Pid INT,
 		Pname VARCHAR(30),
-		Bid INT not null,
-		CreatedOn DATETIME CONSTRAINT DF_Publisher_CreatedOn DEFAULT CURRENT_TIMESTAMP,
-		CONSTRAINT PK_Publisher PRIMARY KEY(Pid)	
+		CreatedOn DATETIME CONSTRAINT DF_Publisher_CreatedOn1 DEFAULT CURRENT_TIMESTAMP,
+		CONSTRAINT PK_Publisher1 PRIMARY KEY(Pid)	
 	)
 	CREATE TABLE Customer
 	(
@@ -35,7 +42,7 @@
 		Phone INT,
 		CreatedOn DATETIME CONSTRAINT DF_Customer_CreatedOn DEFAULT CURRENT_TIMESTAMP,
 		CONSTRAINT PK_Customer PRIMARY KEY(CustId),
-		CONSTRAINT UQ_Customer UNIQUE (Phone)
+		CONSTRAINT UQ_Customer_Phone UNIQUE (Phone)
 	)
 	CREATE TABLE OrderDetail
 	(
@@ -48,7 +55,7 @@
 		Amount FLOAT,
 		CreatedOn DATETIME CONSTRAINT DF_OrderDetail_CreatedOn DEFAULT CURRENT_TIMESTAMP,
 		CONSTRAINT PK_OrderDetail PRIMARY KEY(OrderId),
-		CONSTRAINT CHK_OrderDetail CHECK (Quantity>0)
+		CONSTRAINT CHK_OrderDetail_Quantity CHECK (Quantity>0)
 	)
 	CREATE TABLE Payment
 	(
@@ -63,17 +70,17 @@
 
 
 //inserting data into tables
-	INSERT INTO Book (Bname,AuthorId,ISBN,Price,Genre,Quantity) VALUES
-	('Maths XII',101,'8193233492',200,'Textbook',30)
-	INSERT INTO Book (Bname,AuthorId,ISBN,Price,Genre,Quantity) VALUES
-	('Wings Of Fire',102,'9788173711',350,'Autobiography',20)
+INSERT INTO Book (Bname,AuthorId,Pid,ISBN,Price,Genre,Quantity) VALUES
+	('Maths XII',101,1001,'8193233492',200,'Textbook',30),('Wings Of Fire',102,1002,'9788173711',350,'Autobiography',20)
+	
+	INSERT INTO Author(AuthorId,AuthorName) VALUES
+	(101,'R.D. Sharma'),(102,'A. P. J. Abdul Kalam')	
 
-	INSERT INTO Publisher(Pid,Pname,Bid) VALUES
-	(1001,'NCERT',1),(1002,'University Press',2)
+	INSERT INTO Publisher(Pid,Pname) VALUES
+	(1001,'NCERT'),(1002,'University Press')
 
 	INSERT INTO Customer(CustId,CustName,Address1,Address2,Phone) VALUES
-	(10001,'Ruby Abraham','Trivandrum','Kerala',902345674),
-	(10002,'Reenu Abraham','Kochi','Kerala',882375600)
+	(10001,'Ruby Abraham','Trivandrum','Kerala',902345674),(10002,'Reenu Abraham','Kochi','Kerala',882375600)
 
 	INSERT INTO OrderDetail(OrderId,CustId,Bid,OrderDate,Quantity,Amount) VALUES
 	(201,10001,1,'2023-06-07',2,400),(202,10002,2,'2023-06-07',1,350)
@@ -81,8 +88,10 @@
 	INSERT INTO Payment(PayId,CustId,OrderId,CardNo) VALUES
 	(301,10001,201,1234567),(302,10002,202,7654321)
 
+
 //adding foreign key constraints
-	ALTER TABLE Publisher ADD CONSTRAINT FK_Publisher_Book FOREIGN KEY (Bid) REFERENCES Book(Bid)
+	ALTER TABLE Book ADD CONSTRAINT FK_Book_Author FOREIGN KEY (AuthorId) REFERENCES Author(AuthorId)
+	ALTER TABLE Book ADD CONSTRAINT FK_Book_Publisher FOREIGN KEY (Pid) REFERENCES Publisher(Pid)
 
 	ALTER TABLE OrderDetail ADD CONSTRAINT FK_OrderDetail_Book FOREIGN KEY (Bid) REFERENCES Book(Bid)
 	ALTER TABLE OrderDetail ADD CONSTRAINT FK_OrderDetail_Customer FOREIGN KEY (CustId) REFERENCES Customer(CustId)
