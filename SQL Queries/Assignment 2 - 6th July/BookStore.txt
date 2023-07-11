@@ -12,7 +12,7 @@
 		Price FLOAT,
 		Genre VARCHAR(30),
 		Quantity INT,
-		CreatedOn DATETIME CONSTRAINT DF_Book_CreatedOn DEFAULT CURRENT_TIMESTAMP, 
+		CreatedOn DATETIME CONSTRAINT DF_Book_CreatedOn DEFAULT GETUTCDATE(), 
 		CONSTRAINT PK_Book PRIMARY KEY(Bid),																				
 		CONSTRAINT UQ_Book_ISBN UNIQUE (ISBN)											
 )
@@ -20,7 +20,7 @@
 	(
 		AuthorId INT,
 		AuthorName VARCHAR(30),
-		CreatedOn DATETIME CONSTRAINT DF_Author_CreatedOn DEFAULT CURRENT_TIMESTAMP,
+		CreatedOn DATETIME CONSTRAINT DF_Author_CreatedOn DEFAULT GETUTCDATE(),
 		CONSTRAINT PK_Author PRIMARY KEY(AuthorId)	
 	)
 	CREATE TABLE Publisher
@@ -28,7 +28,7 @@
 
 		Pid INT,
 		Pname VARCHAR(30),
-		CreatedOn DATETIME CONSTRAINT DF_Publisher_CreatedOn DEFAULT CURRENT_TIMESTAMP,
+		CreatedOn DATETIME CONSTRAINT DF_Publisher_CreatedOn DEFAULT GETUTCDATE(),
 		CONSTRAINT PK_Publisher PRIMARY KEY(Pid)	
 	)
 	CREATE TABLE Customer
@@ -39,7 +39,7 @@
 		Address1 VARCHAR(max),
 		Address2 VARCHAR(max),
 		Phone INT,
-		CreatedOn DATETIME CONSTRAINT DF_Customer_CreatedOn DEFAULT CURRENT_TIMESTAMP,
+		CreatedOn DATETIME CONSTRAINT DF_Customer_CreatedOn DEFAULT GETUTCDATE(),
 		CONSTRAINT PK_Customer PRIMARY KEY(CustId),
 		CONSTRAINT UQ_Customer_Phone UNIQUE (Phone)
 	)
@@ -52,7 +52,7 @@
 		OrderDate DATE,
 		Quantity INT,
 		Amount FLOAT,
-		CreatedOn DATETIME CONSTRAINT DF_OrderDetail_CreatedOn DEFAULT CURRENT_TIMESTAMP,
+		CreatedOn DATETIME CONSTRAINT DF_OrderDetail_CreatedOn DEFAULT GETUTCDATE(),
 		CONSTRAINT PK_OrderDetail PRIMARY KEY(OrderId),
 		CONSTRAINT CHK_OrderDetail_Quantity CHECK (Quantity>0)
 	)
@@ -63,7 +63,7 @@
 		CustId INT not null,
 		OrderId INT not null,
 		CardNo INT,
-		CreatedOn DATETIME CONSTRAINT DF_Payment_CreatedOn DEFAULT CURRENT_TIMESTAMP,
+		CreatedOn DATETIME CONSTRAINT DF_Payment_CreatedOn DEFAULT GETUTCDATE(),
 		CONSTRAINT PK_Payment PRIMARY KEY(PayId)
 	)
 
