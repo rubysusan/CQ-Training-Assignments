@@ -28,10 +28,10 @@
 
 5.For Book table: 
     i) Display the no. of books arrived during the last year 
-        SELECT COUNT(*) FROM Book WHERE YEAR(BookAddDate)=YEAR(GETDATE())-1
+        SELECT COUNT(*) FROM Book WHERE YEAR(BookAddDate)=YEAR(GETUTCDATE())-1
 
     ii) Display the no. of books arrived on every Monday during the last year
-        SELECT COUNT(*) FROM Book WHERE YEAR(BookAddDate)=YEAR(GETDATE())-1 AND DATENAME(DW,BookAddDate)='Monday'
+        SELECT COUNT(*) FROM Book WHERE YEAR(BookAddDate)=YEAR(GETUTCDATE())-1 AND DATENAME(DW,BookAddDate)='Monday'
 
 
 6. For Employee table: Display the total no. of days each intern has joined
