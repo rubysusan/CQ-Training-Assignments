@@ -76,7 +76,6 @@
 		CONSTRAINT PK_Payment PRIMARY KEY(PayId)
 	)
 
-
 //inserting data into tables
 	INSERT INTO Book (Bname,AuthorId,Pid,ISBN,Price,Genre,Quantity) VALUES
 	('Maths XII',101,1001,'8193233492',200,'Textbook',30),('Wings Of Fire',102,1002,'9788173711',350,'Autobiography',20)
