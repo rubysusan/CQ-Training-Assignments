@@ -11,26 +11,26 @@ namespace StudentManagement
         public int Id { get; set; }
         public string Name { get; set; }
         public int Mark { get; set; }
-        public char Grade { get; }
+        public char Grade { 
+            get
+            {
+                if (Mark >= 90)
+                    return 'A';
+                else if (Mark >= 80 && Mark < 90)
+                    return 'B';
+                else if (Mark >= 70 && Mark < 80)
+                    return 'C';
+                else if (Mark < 70)
+                    return 'D';
+                return 'F';
+            }
+                 }
 
         public Student(int id,string name,int mark)
         {
             Id = id;
             Name = name;
             Mark = mark;
-            Grade=calcGrade(Mark);
-        }
-        public char calcGrade(int mark)
-        {
-            if (mark >= 90)
-                return 'A';
-            else if (mark >= 80 && mark < 90)
-                return 'B';
-            else if (mark >= 70 && mark < 80)
-                return 'C';
-            else if (mark < 70)
-                return 'D';
-            return 'F';
         }
         public void display()
         {
