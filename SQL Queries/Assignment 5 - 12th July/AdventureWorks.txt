@@ -29,8 +29,8 @@
 
 6. How many items with ListPrice more than $1000 have been sold?
    
-    SELECT SUM(s.OrderQty) AS Items_Sold FROM SalesLT.Product AS p 
-    INNER JOIN SalesLT.SalesOrderDetail AS s ON p.ProductID=s.ProductID WHERE p.ListPrice>1000
+    SELECT COUNT(DISTINCT P.ProductID) as Items_Sold FROM SalesLT.SalesOrderDetail AS p 
+    LEFT JOIN SalesLT.Product AS s ON p.ProductID=s.ProductID WHERE S.ListPrice>1000  
 
 
 7. Give the CompanyName of those customers with orders over $100000. Include the subtotal plus tax plus freight.
@@ -50,11 +50,8 @@
 
 9. “Single Item Order” is a customer order where only one item is ordered. Show the SalesOrderID and the UnitPrice for every Single Item Order.
     
-    SELECT H.SalesOrderID,D.UnitPrice FROM SalesLT.SalesOrderHeader H 
-    INNER JOIN SalesLT.SalesOrderDetail D ON H.SalesOrderID=D.SalesOrderID WHERE H.CustomerID IN
-    (SELECT H.CustomerID FROM SalesLT.SalesOrderHeader H 
-        INNER JOIN SalesLT.SalesOrderDetail D ON H.SalesOrderID=D.SalesOrderID
-        GROUP BY(H.CustomerID) HAVING COUNT(H.CustomerID)=1)
+   SELECT SalesOrderID,UnitPrice FROM SalesLT.SalesOrderDetail WHERE SalesOrderID IN 
+    (SELECT SalesOrderID FROM SalesLT.SalesOrderDetail GROUP BY SalesOrderID HAVING COUNT(SalesOrderID)=1)
 
 
 10. Show the product description for culture ‘fr’ for product with ProductID 736.
