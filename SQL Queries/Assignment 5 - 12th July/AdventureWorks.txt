@@ -29,8 +29,10 @@
 
 6. How many items with ListPrice more than $1000 have been sold?
    
-    SELECT COUNT(DISTINCT P.ProductID) as Items_Sold FROM SalesLT.SalesOrderDetail AS p 
-    LEFT JOIN SalesLT.Product AS s ON p.ProductID=s.ProductID WHERE S.ListPrice>1000  
+   SELECT COUNT(*) AS Items_Sold FROM 
+    (SELECT p.ProductID FROM SalesLT.SalesOrderDetail AS p 
+    LEFT JOIN SalesLT.Product AS s ON p.ProductID=s.ProductID WHERE S.ListPrice>1000 GROUP BY (p.ProductID)
+    ) derived_table
 
 
 7. Give the CompanyName of those customers with orders over $100000. Include the subtotal plus tax plus freight.
