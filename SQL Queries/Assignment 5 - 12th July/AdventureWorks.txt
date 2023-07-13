@@ -45,10 +45,9 @@
 
 8. Find the number of left racing socks ('Racing Socks, L') ordered by CompanyName 'Riding Cycles'
 
-    SELECT D.OrderQty FROM SalesLT.Customer C INNER JOIN SalesLT.SalesOrderHeader H ON C.CustomerID=H.CustomerID
+    SELECT SUM(D.OrderQty) FROM SalesLT.Customer C INNER JOIN SalesLT.SalesOrderHeader H ON C.CustomerID=H.CustomerID
     INNER JOIN SalesLT.SalesOrderDetail D ON H.SalesOrderID=D.SalesOrderID
-    INNER JOIN SalesLT.Product P ON D.ProductID=P.ProductID WHERE C.CompanyName='Riding Cycles' AND P.Name='Racing Socks, L'
-
+    INNER JOIN SalesLT.Product P ON D.ProductID=P.ProductID WHERE C.CompanyName='Riding Cycles' AND P.Name='Racing Socks, L' GROUP BY(P.Name)
 
 9. “Single Item Order” is a customer order where only one item is ordered. Show the SalesOrderID and the UnitPrice for every Single Item Order.
     
