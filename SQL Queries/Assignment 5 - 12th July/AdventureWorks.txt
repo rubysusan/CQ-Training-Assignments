@@ -52,12 +52,13 @@
 9. “Single Item Order” is a customer order where only one item is ordered. Show the SalesOrderID and the UnitPrice for every Single Item Order.
     
    SELECT SalesOrderID,UnitPrice FROM SalesLT.SalesOrderDetail WHERE SalesOrderID IN 
-    (SELECT SalesOrderID FROM SalesLT.SalesOrderDetail GROUP BY SalesOrderID HAVING COUNT(SalesOrderID)=1)
+    (SELECT SalesOrderID FROM SalesLT.SalesOrderDetail 
+    GROUP BY SalesOrderID HAVING COUNT(SalesOrderID)=1)
 
 
 10. Show the product description for culture ‘fr’ for product with ProductID 736.
     
-    SELECT DISTINCT(PD.Description) FROM SalesLT.Product AS P 
-    INNER JOIN SalesLT.ProductModelProductDescription AS PM ON P.ProductModelID=PM.ProductModelID
+    SELECT PD.Description FROM SalesLT.Product AS P JOIN SalesLT.ProductModelProductDescription AS PM ON P.ProductModelID=PM.ProductModelID
 	INNER JOIN SalesLT.ProductDescription AS PD ON PM.ProductDescriptionID=PD.ProductDescriptionID 
     WHERE PM.Culture='fr' AND P.ProductID=736
+	GROUP BY(PD.Description)
