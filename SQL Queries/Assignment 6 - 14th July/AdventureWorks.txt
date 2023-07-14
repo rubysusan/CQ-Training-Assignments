@@ -71,7 +71,14 @@ ORDER BY H.SubTotal DESC
 
 6.From which city 
     a) most no of order
+        SELECT TOP 1 PERCENT A.City AS CITY FROM SalesLT.Address AS A 
+            INNER JOIN SalesLT.SalesOrderHeader AS H 
+                ON A.AddressID=H.BillToAddressID OR A.AddressID=H.ShipToAddressID  
+            INNER JOIN SalesLT.SalesOrderDetail AS D
+                ON H.SalesOrderID=D.SalesOrderID GROUP BY A.City ORDER BY COUNT(H.SalesOrderID) DESC
+
     b) most profitable city 
+    
     c) which hasn't placed any orders
     	SELECT A.City FROM SalesLT.SalesOrderHeader H 
 		    LEFT JOIN SalesLT.Address A 
