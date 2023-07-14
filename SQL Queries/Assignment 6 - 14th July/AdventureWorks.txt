@@ -1,0 +1,84 @@
+1.  Use the SubTotal value in SaleOrderHeader to list orders from the largest to the smallest. For each order show the CompanyName and the SubTotal and the total weight of the order.
+    SELECT C.CompanyName,
+	H.SalesOrderID,
+	H.SubTotal,
+	SUM(D.OrderQty*P.Weight) AS Total_Weight 
+FROM SalesLT.Customer AS C 
+	INNER JOIN SalesLT.SalesOrderHeader AS H 
+		ON C.CustomerID=H.CustomerID
+	INNER JOIN SalesLT.SalesOrderDetail AS D 
+		ON H.SalesOrderID=D.SalesOrderID
+	INNER JOIN SalesLT.Product AS P 
+		ON D.ProductID=P.ProductID 
+GROUP BY C.CompanyName,H.SalesOrderID,H.SubTotal 
+ORDER BY H.SubTotal DESC
+
+
+2. How many products in ProductCategory ‘Cranksets’ have been sold to an address in ‘London’?
+    SELECT  COUNT(D.OrderQty)  
+    FROM SalesLT.ProductCategory AS PC 
+        INNER JOIN SalesLT.Product AS P		
+            ON PC.ProductCategoryID=P.ProductCategoryID
+        INNER JOIN SalesLT.SalesOrderDetail AS D 
+            ON P.ProductID=D.ProductID
+        INNER JOIN SalesLT.SalesOrderHeader AS H 
+            ON D.SalesOrderID=H.SalesOrderID
+        INNER JOIN SalesLT.CustomerAddress AS CA 
+            ON H.CustomerID=CA.CustomerID
+        INNER JOIN SalesLT.Address AS A 
+            ON CA.AddressID=A.AddressID
+    WHERE PC.Name='Cranksets' AND A.City='London'
+
+
+3.For every customer with a ‘Main Office’ in Dallas show AddressLine1 of the ‘Main Office’ and AddressLine1 of the ‘Shipping’ address - if there is no shipping address leave it blank. Use one row per customer.
+ -- Here Main Office and shipping is address type
+
+ 
+    SELECT T.MainAddress,CASE 
+                            WHEN T.CustomerID<>TT.CustomerID then ' ' 
+                            ELSE tt.ShipAddress 
+                            END AS ShipAddress 
+    FROM (SELECT AddressLine1 AS MainAddress,c.CustomerID FROM SalesLT.Customer C 
+            INNER JOIN SalesLT.CustomerAddress CA 
+                ON C.CustomerID=CA.CustomerID
+            INNER JOIN SalesLT.Address A
+                ON CA.AddressID=A.AddressID WHERE CA.AddressType='Main Office' and A.City='Dallas')T 
+            CROSS JOIN
+        (SELECT AddressLine1 AS ShipAddress,c.CustomerID FROM SalesLT.Customer C 
+            INNER JOIN SalesLT.CustomerAddress CA 
+                ON C.CustomerID=CA.CustomerID
+            INNER JOIN SalesLT.Address A
+                ON CA.AddressID=A.AddressID WHERE CA.AddressType='Shipping' and A.City='Dallas')TT 
+    GROUP BY T.CustomerID,TT.CustomerID,T.MainAddress,TT.ShipAddress
+
+
+4.For each order show the SalesOrderID and SubTotal calculated  in three ways: 
+   A) From the SalesOrderHeader  (Order header table)
+        SELECT SalesOrderID,SubTotal FROM SalesLT.SalesOrderHeader
+
+   B) Sum of OrderQtyUnitPrice  ( Order Detail table ) 
+        SELECT SalesOrderID,SUM(OrderQty*UnitPrice)AS Subtotal 
+        FROM SalesLT.SalesOrderDetail 
+        GROUP BY(SalesOrderID)
+
+   C) Sum of OrderQtyListPrice (Product table)
+        SELECT D.SalesOrderID,SUM(D.OrderQty*P.ListPrice)AS Subtotal 
+        FROM SalesLT.SalesOrderDetail AS D 
+	        INNER JOIN SalesLT.Product AS P 
+                ON D.ProductID=P.ProductID 
+        GROUP BY(D.SalesOrderID)
+
+5.Show the best selling item by value.
+    SELECT MAX((ListPrice-StandardCost)*OrderQty) Value
+    FROM SalesLT.SalesOrderDetail AS D 
+	    INNER JOIN SalesLT.Product AS P 
+            ON D.ProductID=P.ProductID 
+
+6.From which city 
+    a) most no of order
+    b) most profitable city 
+    c) which hasn't placed any orders
+    	SELECT A.City FROM SalesLT.SalesOrderHeader H 
+		    LEFT JOIN SalesLT.Address A 
+			    ON H.BillToAddressID=A.AddressID OR H.ShipToAddressID=A.AddressID 
+        WHERE A.AddressID IS NULL
