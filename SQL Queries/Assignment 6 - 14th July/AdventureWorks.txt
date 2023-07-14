@@ -32,24 +32,19 @@ ORDER BY H.SubTotal DESC
 
 3.For every customer with a ‘Main Office’ in Dallas show AddressLine1 of the ‘Main Office’ and AddressLine1 of the ‘Shipping’ address - if there is no shipping address leave it blank. Use one row per customer.
  -- Here Main Office and shipping is address type
-
- 
     SELECT T.MainAddress,CASE 
                             WHEN T.CustomerID<>TT.CustomerID then ' ' 
                             ELSE tt.ShipAddress 
                             END AS ShipAddress 
-    FROM (SELECT AddressLine1 AS MainAddress,c.CustomerID FROM SalesLT.Customer C 
-            INNER JOIN SalesLT.CustomerAddress CA 
-                ON C.CustomerID=CA.CustomerID
+    FROM (SELECT AddressLine1 AS MainAddress,CA.CustomerID FROM
+    SalesLT.CustomerAddress CA 
             INNER JOIN SalesLT.Address A
                 ON CA.AddressID=A.AddressID WHERE CA.AddressType='Main Office' and A.City='Dallas')T 
             CROSS JOIN
-        (SELECT AddressLine1 AS ShipAddress,c.CustomerID FROM SalesLT.Customer C 
-            INNER JOIN SalesLT.CustomerAddress CA 
-                ON C.CustomerID=CA.CustomerID
+        (SELECT AddressLine1 AS ShipAddress,CA.CustomerID FROM
+    SalesLT.CustomerAddress CA 
             INNER JOIN SalesLT.Address A
                 ON CA.AddressID=A.AddressID WHERE CA.AddressType='Shipping' and A.City='Dallas')TT 
-    GROUP BY T.CustomerID,TT.CustomerID,T.MainAddress,TT.ShipAddress
 
 
 4.For each order show the SalesOrderID and SubTotal calculated  in three ways: 
