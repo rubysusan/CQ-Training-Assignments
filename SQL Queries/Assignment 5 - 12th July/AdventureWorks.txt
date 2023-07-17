@@ -18,7 +18,7 @@
 
 4. Show the first name and the email address of customer with CompanyName 'Bike World'
     
-    SELECT DISTINCT FirstName,EmailAddress FROM SalesLT.Customer WHERE CompanyName='Bike World'
+    SELECT FirstName,EmailAddress FROM SalesLT.Customer WHERE CompanyName='Bike World'
 
 
 5. Show the CompanyName for all customers with an address in City 'Dallas'.
@@ -61,4 +61,3 @@
     SELECT PD.Description FROM SalesLT.Product AS P JOIN SalesLT.ProductModelProductDescription AS PM ON P.ProductModelID=PM.ProductModelID
 	INNER JOIN SalesLT.ProductDescription AS PD ON PM.ProductDescriptionID=PD.ProductDescriptionID 
     WHERE PM.Culture='fr' AND P.ProductID=736
-	GROUP BY(PD.Description)
