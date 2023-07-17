@@ -73,10 +73,9 @@ ORDER BY H.SubTotal DESC
 6.From which city 
     a) most no of order
         SELECT TOP 1 A.City AS CITY FROM SalesLT.Address AS A 
-            INNER JOIN SalesLT.SalesOrderHeader AS H 
-                ON A.AddressID=H.BillToAddressID OR A.AddressID=H.ShipToAddressID  
-            INNER JOIN SalesLT.SalesOrderDetail AS D
-                ON H.SalesOrderID=D.SalesOrderID GROUP BY A.City ORDER BY COUNT(H.SalesOrderID) DESC
+		    INNER JOIN SalesLT.SalesOrderHeader AS H 
+			    ON A.AddressID=H.BillToAddressID OR A.AddressID=H.ShipToAddressID  
+		GROUP BY A.City ORDER BY COUNT(H.SalesOrderID)DESC
 
     b) most profitable city 
     SELECT TOP 1 SA.City FROM SalesLT.Product SP 
@@ -96,7 +95,7 @@ ORDER BY H.SubTotal DESC
             DESC) 
     GROUP BY SA.CITY 
     ORDER BY MAX(OD.OrderQty) DESC
-    
+
     c) which hasn't placed any orders
     	SELECT A.City FROM SalesLT.SalesOrderHeader H 
 		    RIGHT JOIN SalesLT.Address A 
