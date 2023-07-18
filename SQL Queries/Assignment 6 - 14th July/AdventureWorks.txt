@@ -15,7 +15,7 @@ ORDER BY H.SubTotal DESC
 
 
 2. How many products in ProductCategory ‘Cranksets’ have been sold to an address in ‘London’?
-    SELECT  COUNT(D.OrderQty)  
+    SELECT COUNT(DISTINCT D.OrderQty) Count_Value
     FROM SalesLT.ProductCategory AS PC 
         INNER JOIN SalesLT.Product AS P		
             ON PC.ProductCategoryID=P.ProductCategoryID
@@ -62,6 +62,17 @@ ORDER BY H.SubTotal DESC
 	        INNER JOIN SalesLT.Product AS P 
                 ON D.ProductID=P.ProductID 
         GROUP BY(D.SalesOrderID)
+
+    ANSWER IN A SINGLE QUERY USING UNION ALL:
+    
+    	SELECT SalesOrderID,SubTotal,CONCAT('From ','Table Order Header') Table_Detail FROM SalesLT.SalesOrderHeader
+        union all 
+        SELECT SalesOrderID,SUM(OrderQty*UnitPrice)AS Subtotal,CONCAT('From ','Table Order Detail') Table_Detail 
+            FROM SalesLT.SalesOrderDetail GROUP BY(SalesOrderID)
+        union all
+        SELECT D.SalesOrderID,SUM(D.OrderQty*P.ListPrice)AS Subtotal,CONCAT('From ','Table Product') Table_Detail 
+            FROM SalesLT.SalesOrderDetail AS D 
+                INNER JOIN SalesLT.Product AS P ON D.ProductID=P.ProductID GROUP BY(D.SalesOrderID)
 
 5.Show the best selling item by value.
     SELECT * from SalesLT.Product WHERE ProductID = 
