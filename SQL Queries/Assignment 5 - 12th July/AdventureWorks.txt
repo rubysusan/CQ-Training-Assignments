@@ -34,6 +34,11 @@
     LEFT JOIN SalesLT.Product AS s ON p.ProductID=s.ProductID WHERE S.ListPrice>1000 GROUP BY (p.ProductID)
     ) derived_table
 
+    using exists:
+    SELECT COUNT(P.ProductID) Items_Sold FROM SalesLT.Product P
+    WHERE EXISTS(SELECT * FROM SalesLT.SalesOrderDetail D WHERE D.ProductID=P.ProductID) 
+        AND P.ListPrice>1000 
+
 
 7. Give the CompanyName of those customers with orders over $100000. Include the subtotal plus tax plus freight.
     
@@ -48,6 +53,15 @@
     SELECT SUM(D.OrderQty) FROM SalesLT.Customer C INNER JOIN SalesLT.SalesOrderHeader H ON C.CustomerID=H.CustomerID
     INNER JOIN SalesLT.SalesOrderDetail D ON H.SalesOrderID=D.SalesOrderID
     INNER JOIN SalesLT.Product P ON D.ProductID=P.ProductID WHERE C.CompanyName='Riding Cycles' AND P.Name='Racing Socks, L' GROUP BY(P.Name)
+
+    USING EXISTS:
+    
+    SELECT D.OrderQty FROM SalesLT.SalesOrderDetail D
+    WHERE EXISTS ( SELECT * FROM SalesLT.Product P  WHERE P.ProductID=D.ProductID AND P.Name='Racing Socks, L' AND 
+                    EXISTS (SELECT * FROM SalesLT.SalesOrderHeader H WHERE D.SalesOrderID=H.SalesOrderID AND 
+                            EXISTS (SELECT * FROM SalesLT.Customer C WHERE H.CustomerID=C.CustomerID AND C.CompanyName='Riding Cycles')
+                            )
+                ) 
 
 9. “Single Item Order” is a customer order where only one item is ordered. Show the SalesOrderID and the UnitPrice for every Single Item Order.
     
