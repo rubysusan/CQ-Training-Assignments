@@ -55,7 +55,7 @@
     INNER JOIN SalesLT.Product P ON D.ProductID=P.ProductID WHERE C.CompanyName='Riding Cycles' AND P.Name='Racing Socks, L' GROUP BY(P.Name)
 
     USING EXISTS:
-    
+
     SELECT D.OrderQty FROM SalesLT.SalesOrderDetail D
     WHERE EXISTS ( SELECT * FROM SalesLT.Product P  WHERE P.ProductID=D.ProductID AND P.Name='Racing Socks, L' AND 
                     EXISTS (SELECT * FROM SalesLT.SalesOrderHeader H WHERE D.SalesOrderID=H.SalesOrderID AND 
@@ -68,6 +68,13 @@
    SELECT SalesOrderID,UnitPrice FROM SalesLT.SalesOrderDetail WHERE SalesOrderID IN 
     (SELECT SalesOrderID FROM SalesLT.SalesOrderDetail 
     GROUP BY SalesOrderID HAVING COUNT(SalesOrderID)=1)
+
+    USING EXISTS:
+    
+    SELECT SalesOrderID,UnitPrice FROM SalesLT.SalesOrderDetail o 
+    WHERE EXISTS
+        (SELECT SalesOrderID FROM SalesLT.SalesOrderDetail d WHERE o.SalesOrderID=d.SalesOrderID 
+        GROUP BY d.SalesOrderID HAVING COUNT(d.SalesOrderID)=1)
 
 
 10. Show the product description for culture ‘fr’ for product with ProductID 736.
