@@ -1,0 +1,11 @@
+CREATE TABLE Names
+(FirstName VARCHAR(30),
+LastName VARCHAR(30))
+
+INSERT INTO Names 
+VALUES('Ruby','Abraham'),('Reenu','Abraham')
+
+DECLARE @char VARCHAR(MAX)='e'  
+  
+SELECT FirstName,(LEN(FirstName)-LEN(REPLACE(FirstName,@char,''))) 
+AS CountValue FROM Names
