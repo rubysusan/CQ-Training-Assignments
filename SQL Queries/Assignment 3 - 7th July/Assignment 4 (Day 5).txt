@@ -1,0 +1,38 @@
+1. Display the last incremented id value (identity primary key)
+    SELECT IDENT_CURRENT('Book')
+
+
+2. Display date in DD-MM-YYYY format
+    SELECT FORMAT(getdate(), 'dd-MM-yyyy')
+
+
+3. Declare an attribute of datatype datetime and display only the date
+    SELECT CONVERT(date,getdate()) //using convert function
+    SELECT CAST(GETDATE() AS DATE) //using cast function
+
+
+4. Create an employee table with field “joiningdate” and display the joining date in two time zones - India and New York
+    CREATE TABLE Employee
+    (
+        Empid INT NOT NULL IDENTITY PRIMARY KEY,
+        FirstName VARCHAR(20),
+        LastName VARCHAR(20),
+        Age INT,
+        JoiningDate DATETIMEOFFSET
+    )
+    INSERT INTO Employee (FirstName,LastName,Age,JoiningDate) VALUES ('Ruby', 'Abraham',21, '2023-07-03 4:00:00 +00:00');
+    INSERT INTO Employee (FirstName,LastName,Age,JoiningDate) VALUES ('Aisha', 'Rahim',21, '2023-07-04 4:00:00 +00:00');
+    
+    Select SWITCHOFFSET(JoiningDate,'+05:30') AS Indian_Joining_Time,
+    SWITCHOFFSET(JoiningDate,'-04:00') AS NewYork_Joining_Time from Employee 
+
+5.For Book table: 
+    i) Display the no. of books arrived during the last year 
+        SELECT * FROM Book WHERE DATEPART(YEAR,BookAddDate)='2022'
+
+    ii) Display the no. of books arrived on every Monday during the last year
+        SELECT * FROM Book WHERE DATEPART(YEAR,BookAddDate)='2022' AND DATENAME(DW,BookAddDate)='Monday'
+
+
+6. For Employee table: Display the total no. of days each intern has joined
+    select DATEDIFF(DAY,JoiningDate,GETDATE()) as no_of_days_joined from Employee
