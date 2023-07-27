@@ -1,0 +1,36 @@
+C:\Users\CQ-Ruby\source\repos\EmployeeApp\EmployeeApp\bin\Debug\net6.0\EmployeeApp.exe
+C:\Users\CQ-Ruby\source\repos\EmployeeApp\EmployeeApp\bin\Debug\net6.0\EmployeeApp.deps.json
+C:\Users\CQ-Ruby\source\repos\EmployeeApp\EmployeeApp\bin\Debug\net6.0\EmployeeApp.runtimeconfig.json
+C:\Users\CQ-Ruby\source\repos\EmployeeApp\EmployeeApp\bin\Debug\net6.0\EmployeeApp.dll
+C:\Users\CQ-Ruby\source\repos\EmployeeApp\EmployeeApp\bin\Debug\net6.0\EmployeeApp.pdb
+C:\Users\CQ-Ruby\source\repos\EmployeeApp\EmployeeApp\bin\Debug\net6.0\EmployeeModel.dll
+C:\Users\CQ-Ruby\source\repos\EmployeeApp\EmployeeApp\bin\Debug\net6.0\EmployeeModel.pdb
+C:\Users\CQ-Ruby\source\repos\EmployeeApp\EmployeeApp\obj\Debug\net6.0\EmployeeApp.csproj.AssemblyReference.cache
+C:\Users\CQ-Ruby\source\repos\EmployeeApp\EmployeeApp\obj\Debug\net6.0\EmployeeApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CQ-Ruby\source\repos\EmployeeApp\EmployeeApp\obj\Debug\net6.0\EmployeeApp.AssemblyInfoInputs.cache
+C:\Users\CQ-Ruby\source\repos\EmployeeApp\EmployeeApp\obj\Debug\net6.0\EmployeeApp.AssemblyInfo.cs
+C:\Users\CQ-Ruby\source\repos\EmployeeApp\EmployeeApp\obj\Debug\net6.0\EmployeeApp.csproj.CoreCompileInputs.cache
+C:\Users\CQ-Ruby\source\repos\EmployeeApp\EmployeeApp\obj\Debug\net6.0\EmployeeApp.csproj.CopyComplete
+C:\Users\CQ-Ruby\source\repos\EmployeeApp\EmployeeApp\obj\Debug\net6.0\EmployeeApp.dll
+C:\Users\CQ-Ruby\source\repos\EmployeeApp\EmployeeApp\obj\Debug\net6.0\refint\EmployeeApp.dll
+C:\Users\CQ-Ruby\source\repos\EmployeeApp\EmployeeApp\obj\Debug\net6.0\EmployeeApp.pdb
+C:\Users\CQ-Ruby\source\repos\EmployeeApp\EmployeeApp\obj\Debug\net6.0\EmployeeApp.genruntimeconfig.cache
+C:\Users\CQ-Ruby\source\repos\EmployeeApp\EmployeeApp\obj\Debug\net6.0\ref\EmployeeApp.dll
+C:\github training assignments\CQ-Training-Assignments\C# Assignments\Assignment - 26th July\Assignment 1\EmployeeApp\EmployeeApp\obj\Debug\net6.0\EmployeeApp.dll
+C:\github training assignments\CQ-Training-Assignments\C# Assignments\Assignment - 26th July\Assignment 1\EmployeeApp\EmployeeApp\obj\Debug\net6.0\refint\EmployeeApp.dll
+C:\github training assignments\CQ-Training-Assignments\C# Assignments\Assignment - 26th July\Assignment 1\EmployeeApp\EmployeeApp\obj\Debug\net6.0\EmployeeApp.pdb
+C:\github training assignments\CQ-Training-Assignments\C# Assignments\Assignment - 26th July\Assignment 1\EmployeeApp\EmployeeApp\bin\Debug\net6.0\EmployeeApp.exe
+C:\github training assignments\CQ-Training-Assignments\C# Assignments\Assignment - 26th July\Assignment 1\EmployeeApp\EmployeeApp\bin\Debug\net6.0\EmployeeApp.deps.json
+C:\github training assignments\CQ-Training-Assignments\C# Assignments\Assignment - 26th July\Assignment 1\EmployeeApp\EmployeeApp\bin\Debug\net6.0\EmployeeApp.runtimeconfig.json
+C:\github training assignments\CQ-Training-Assignments\C# Assignments\Assignment - 26th July\Assignment 1\EmployeeApp\EmployeeApp\bin\Debug\net6.0\EmployeeApp.dll
+C:\github training assignments\CQ-Training-Assignments\C# Assignments\Assignment - 26th July\Assignment 1\EmployeeApp\EmployeeApp\bin\Debug\net6.0\EmployeeApp.pdb
+C:\github training assignments\CQ-Training-Assignments\C# Assignments\Assignment - 26th July\Assignment 1\EmployeeApp\EmployeeApp\bin\Debug\net6.0\EmployeeModel.dll
+C:\github training assignments\CQ-Training-Assignments\C# Assignments\Assignment - 26th July\Assignment 1\EmployeeApp\EmployeeApp\bin\Debug\net6.0\EmployeeModel.pdb
+C:\github training assignments\CQ-Training-Assignments\C# Assignments\Assignment - 26th July\Assignment 1\EmployeeApp\EmployeeApp\obj\Debug\net6.0\EmployeeApp.csproj.AssemblyReference.cache
+C:\github training assignments\CQ-Training-Assignments\C# Assignments\Assignment - 26th July\Assignment 1\EmployeeApp\EmployeeApp\obj\Debug\net6.0\EmployeeApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\github training assignments\CQ-Training-Assignments\C# Assignments\Assignment - 26th July\Assignment 1\EmployeeApp\EmployeeApp\obj\Debug\net6.0\EmployeeApp.AssemblyInfoInputs.cache
+C:\github training assignments\CQ-Training-Assignments\C# Assignments\Assignment - 26th July\Assignment 1\EmployeeApp\EmployeeApp\obj\Debug\net6.0\EmployeeApp.AssemblyInfo.cs
+C:\github training assignments\CQ-Training-Assignments\C# Assignments\Assignment - 26th July\Assignment 1\EmployeeApp\EmployeeApp\obj\Debug\net6.0\EmployeeApp.csproj.CoreCompileInputs.cache
+C:\github training assignments\CQ-Training-Assignments\C# Assignments\Assignment - 26th July\Assignment 1\EmployeeApp\EmployeeApp\obj\Debug\net6.0\EmployeeApp.csproj.CopyComplete
+C:\github training assignments\CQ-Training-Assignments\C# Assignments\Assignment - 26th July\Assignment 1\EmployeeApp\EmployeeApp\obj\Debug\net6.0\EmployeeApp.genruntimeconfig.cache
+C:\github training assignments\CQ-Training-Assignments\C# Assignments\Assignment - 26th July\Assignment 1\EmployeeApp\EmployeeApp\obj\Debug\net6.0\ref\EmployeeApp.dll
