@@ -48,7 +48,7 @@ function showResult()
     console.log(arr.filter(y=>y.Age>21).map(y=>y.FirstName));
     //3
     console.log("Student having a first name as Robert is present in the Computer Science Department:");
-    console.log(arr.filter(y=>y.Department==="Computer Science").map(y=>y.FirstName).includes("Robert"));
+    console.log(arr.some(y=>y.FirstName==="Robert"));
     //4
     console.log("Student whose age is greater than 23 is studying in the Maths department:");
     console.log(arr.some(y=>y.Department==="Mathematics" && y.Age>23));
@@ -57,5 +57,6 @@ function showResult()
     console.log(arr.every(y=>y.Age>18));
     //6
     console.log("Department of Student with First Name \"John\":");
-    console.log(arr.filter(y=>y.FirstName==="John").map(y=>y.Department));
+    console.log(arr.find(y=>y.FirstName==="John"));
 }
+showResult();
