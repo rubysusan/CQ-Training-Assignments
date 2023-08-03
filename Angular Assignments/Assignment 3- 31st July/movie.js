@@ -50,11 +50,11 @@ console.log("Whether there is any movie in the list with actor name John Doe");
 console.log(movie.some(y=>y.ActorName==="John Doe"));
 
   //5
-  var count = movie.filter(y=>y.ActorName==="Sophia Williams").length;
+  let count = movie.filter(y=>y.ActorName==="Sophia Williams").length;
   console.log("Count of movies where the actor name is Sophia Williams: "+count);
 
   //6
-  var newElement={
+  let newElement={
                   "MovieName": "The Final Stage",
                   "ActorName": "John Doe",
                   "ReleaseDate": "2022-08-11"
@@ -64,7 +64,7 @@ console.log(movie.some(y=>y.ActorName==="John Doe"));
    console.log(movie);
 
 //7   
-   var ct=0;
+   let ct=0;
    if(movie[0].MovieName===movie[movie.length-1].MovieName)
    {
        ct++;
@@ -82,7 +82,7 @@ console.log(movie.some(y=>y.ActorName==="John Doe"));
       console.log("No Duplicates Present");
 
 //8
-  var newArr=movie.slice(3);
+  let newArr=movie.slice(3);
   console.log("New array created: ")
   console.log(newArr);
 
@@ -122,7 +122,7 @@ console.log("Updated movie City of Shadows\'s release date as 2023-03-13");
 console.log(movie[index]);
 
 //15
-var newMovie=movie.filter(y=>y.MovieName.length>10);
+let newMovie=movie.filter(y=>y.MovieName.length>10);
 console.log("New array of movie names whose movie name length is greater than 10:");
 console.log(newMovie);
 }
