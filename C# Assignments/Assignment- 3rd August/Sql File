@@ -1,0 +1,27 @@
+CREATE DATABASE School
+USE School
+
+
+CREATE TABLE Student
+(StudentId INT PRIMARY KEY IDENTITY(100,1),
+StudentName VARCHAR(30),
+Class VARCHAR(10),
+TotalMarks INT)
+
+CREATE PROC AddStudent
+@sname VARCHAR(30),
+@class VARCHAR(10),
+@mark INT,
+@idval INT OUTPUT
+AS
+	BEGIN 
+	INSERT INTO STUDENT (StudentName,Class,TotalMarks) VALUES (@sname,@class,@mark)
+
+	SELECT @idval=@@IDENTITY
+	END
+
+CREATE PROC GetStudent
+AS
+	BEGIN 
+	SELECT * FROM STUDENT
+	END
