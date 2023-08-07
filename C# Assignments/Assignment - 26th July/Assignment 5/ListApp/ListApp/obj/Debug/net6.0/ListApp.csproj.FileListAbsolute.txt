@@ -1,0 +1,15 @@
+C:\Users\CQ-Ruby\source\repos\ListApp\ListApp\bin\Debug\net6.0\ListApp.exe
+C:\Users\CQ-Ruby\source\repos\ListApp\ListApp\bin\Debug\net6.0\ListApp.deps.json
+C:\Users\CQ-Ruby\source\repos\ListApp\ListApp\bin\Debug\net6.0\ListApp.runtimeconfig.json
+C:\Users\CQ-Ruby\source\repos\ListApp\ListApp\bin\Debug\net6.0\ListApp.dll
+C:\Users\CQ-Ruby\source\repos\ListApp\ListApp\bin\Debug\net6.0\ListApp.pdb
+C:\Users\CQ-Ruby\source\repos\ListApp\ListApp\obj\Debug\net6.0\ListApp.csproj.AssemblyReference.cache
+C:\Users\CQ-Ruby\source\repos\ListApp\ListApp\obj\Debug\net6.0\ListApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CQ-Ruby\source\repos\ListApp\ListApp\obj\Debug\net6.0\ListApp.AssemblyInfoInputs.cache
+C:\Users\CQ-Ruby\source\repos\ListApp\ListApp\obj\Debug\net6.0\ListApp.AssemblyInfo.cs
+C:\Users\CQ-Ruby\source\repos\ListApp\ListApp\obj\Debug\net6.0\ListApp.csproj.CoreCompileInputs.cache
+C:\Users\CQ-Ruby\source\repos\ListApp\ListApp\obj\Debug\net6.0\ListApp.dll
+C:\Users\CQ-Ruby\source\repos\ListApp\ListApp\obj\Debug\net6.0\refint\ListApp.dll
+C:\Users\CQ-Ruby\source\repos\ListApp\ListApp\obj\Debug\net6.0\ListApp.pdb
+C:\Users\CQ-Ruby\source\repos\ListApp\ListApp\obj\Debug\net6.0\ListApp.genruntimeconfig.cache
+C:\Users\CQ-Ruby\source\repos\ListApp\ListApp\obj\Debug\net6.0\ref\ListApp.dll

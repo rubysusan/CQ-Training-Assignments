@@ -1,0 +1,15 @@
+C:\Users\CQ-Ruby\source\repos\ExtensionClass\ExtensionClass\bin\Debug\net6.0\ExtensionClass.exe
+C:\Users\CQ-Ruby\source\repos\ExtensionClass\ExtensionClass\bin\Debug\net6.0\ExtensionClass.deps.json
+C:\Users\CQ-Ruby\source\repos\ExtensionClass\ExtensionClass\bin\Debug\net6.0\ExtensionClass.runtimeconfig.json
+C:\Users\CQ-Ruby\source\repos\ExtensionClass\ExtensionClass\bin\Debug\net6.0\ExtensionClass.dll
+C:\Users\CQ-Ruby\source\repos\ExtensionClass\ExtensionClass\bin\Debug\net6.0\ExtensionClass.pdb
+C:\Users\CQ-Ruby\source\repos\ExtensionClass\ExtensionClass\obj\Debug\net6.0\ExtensionClass.csproj.AssemblyReference.cache
+C:\Users\CQ-Ruby\source\repos\ExtensionClass\ExtensionClass\obj\Debug\net6.0\ExtensionClass.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CQ-Ruby\source\repos\ExtensionClass\ExtensionClass\obj\Debug\net6.0\ExtensionClass.AssemblyInfoInputs.cache
+C:\Users\CQ-Ruby\source\repos\ExtensionClass\ExtensionClass\obj\Debug\net6.0\ExtensionClass.AssemblyInfo.cs
+C:\Users\CQ-Ruby\source\repos\ExtensionClass\ExtensionClass\obj\Debug\net6.0\ExtensionClass.csproj.CoreCompileInputs.cache
+C:\Users\CQ-Ruby\source\repos\ExtensionClass\ExtensionClass\obj\Debug\net6.0\ExtensionClass.dll
+C:\Users\CQ-Ruby\source\repos\ExtensionClass\ExtensionClass\obj\Debug\net6.0\refint\ExtensionClass.dll
+C:\Users\CQ-Ruby\source\repos\ExtensionClass\ExtensionClass\obj\Debug\net6.0\ExtensionClass.pdb
+C:\Users\CQ-Ruby\source\repos\ExtensionClass\ExtensionClass\obj\Debug\net6.0\ExtensionClass.genruntimeconfig.cache
+C:\Users\CQ-Ruby\source\repos\ExtensionClass\ExtensionClass\obj\Debug\net6.0\ref\ExtensionClass.dll

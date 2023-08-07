@@ -1,0 +1,15 @@
+C:\Users\CQ-Ruby\source\repos\ShapeApp\ShapeApp\bin\Debug\net6.0\ShapeApp.exe
+C:\Users\CQ-Ruby\source\repos\ShapeApp\ShapeApp\bin\Debug\net6.0\ShapeApp.deps.json
+C:\Users\CQ-Ruby\source\repos\ShapeApp\ShapeApp\bin\Debug\net6.0\ShapeApp.runtimeconfig.json
+C:\Users\CQ-Ruby\source\repos\ShapeApp\ShapeApp\bin\Debug\net6.0\ShapeApp.dll
+C:\Users\CQ-Ruby\source\repos\ShapeApp\ShapeApp\bin\Debug\net6.0\ShapeApp.pdb
+C:\Users\CQ-Ruby\source\repos\ShapeApp\ShapeApp\obj\Debug\net6.0\ShapeApp.csproj.AssemblyReference.cache
+C:\Users\CQ-Ruby\source\repos\ShapeApp\ShapeApp\obj\Debug\net6.0\ShapeApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CQ-Ruby\source\repos\ShapeApp\ShapeApp\obj\Debug\net6.0\ShapeApp.AssemblyInfoInputs.cache
+C:\Users\CQ-Ruby\source\repos\ShapeApp\ShapeApp\obj\Debug\net6.0\ShapeApp.AssemblyInfo.cs
+C:\Users\CQ-Ruby\source\repos\ShapeApp\ShapeApp\obj\Debug\net6.0\ShapeApp.csproj.CoreCompileInputs.cache
+C:\Users\CQ-Ruby\source\repos\ShapeApp\ShapeApp\obj\Debug\net6.0\ShapeApp.dll
+C:\Users\CQ-Ruby\source\repos\ShapeApp\ShapeApp\obj\Debug\net6.0\refint\ShapeApp.dll
+C:\Users\CQ-Ruby\source\repos\ShapeApp\ShapeApp\obj\Debug\net6.0\ShapeApp.pdb
+C:\Users\CQ-Ruby\source\repos\ShapeApp\ShapeApp\obj\Debug\net6.0\ShapeApp.genruntimeconfig.cache
+C:\Users\CQ-Ruby\source\repos\ShapeApp\ShapeApp\obj\Debug\net6.0\ref\ShapeApp.dll

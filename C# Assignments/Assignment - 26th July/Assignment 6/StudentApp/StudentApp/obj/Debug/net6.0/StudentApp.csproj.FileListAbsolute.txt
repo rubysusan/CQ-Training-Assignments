@@ -1,0 +1,15 @@
+C:\Users\CQ-Ruby\source\repos\StudentApp\StudentApp\bin\Debug\net6.0\StudentApp.exe
+C:\Users\CQ-Ruby\source\repos\StudentApp\StudentApp\bin\Debug\net6.0\StudentApp.deps.json
+C:\Users\CQ-Ruby\source\repos\StudentApp\StudentApp\bin\Debug\net6.0\StudentApp.runtimeconfig.json
+C:\Users\CQ-Ruby\source\repos\StudentApp\StudentApp\bin\Debug\net6.0\StudentApp.dll
+C:\Users\CQ-Ruby\source\repos\StudentApp\StudentApp\bin\Debug\net6.0\StudentApp.pdb
+C:\Users\CQ-Ruby\source\repos\StudentApp\StudentApp\obj\Debug\net6.0\StudentApp.csproj.AssemblyReference.cache
+C:\Users\CQ-Ruby\source\repos\StudentApp\StudentApp\obj\Debug\net6.0\StudentApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CQ-Ruby\source\repos\StudentApp\StudentApp\obj\Debug\net6.0\StudentApp.AssemblyInfoInputs.cache
+C:\Users\CQ-Ruby\source\repos\StudentApp\StudentApp\obj\Debug\net6.0\StudentApp.AssemblyInfo.cs
+C:\Users\CQ-Ruby\source\repos\StudentApp\StudentApp\obj\Debug\net6.0\StudentApp.csproj.CoreCompileInputs.cache
+C:\Users\CQ-Ruby\source\repos\StudentApp\StudentApp\obj\Debug\net6.0\StudentApp.dll
+C:\Users\CQ-Ruby\source\repos\StudentApp\StudentApp\obj\Debug\net6.0\refint\StudentApp.dll
+C:\Users\CQ-Ruby\source\repos\StudentApp\StudentApp\obj\Debug\net6.0\StudentApp.pdb
+C:\Users\CQ-Ruby\source\repos\StudentApp\StudentApp\obj\Debug\net6.0\StudentApp.genruntimeconfig.cache
+C:\Users\CQ-Ruby\source\repos\StudentApp\StudentApp\obj\Debug\net6.0\ref\StudentApp.dll

@@ -1,0 +1,15 @@
+C:\Users\CQ-Ruby\source\repos\GenericClass\GenericClass\bin\Debug\net6.0\GenericClass.exe
+C:\Users\CQ-Ruby\source\repos\GenericClass\GenericClass\bin\Debug\net6.0\GenericClass.deps.json
+C:\Users\CQ-Ruby\source\repos\GenericClass\GenericClass\bin\Debug\net6.0\GenericClass.runtimeconfig.json
+C:\Users\CQ-Ruby\source\repos\GenericClass\GenericClass\bin\Debug\net6.0\GenericClass.dll
+C:\Users\CQ-Ruby\source\repos\GenericClass\GenericClass\bin\Debug\net6.0\GenericClass.pdb
+C:\Users\CQ-Ruby\source\repos\GenericClass\GenericClass\obj\Debug\net6.0\GenericClass.csproj.AssemblyReference.cache
+C:\Users\CQ-Ruby\source\repos\GenericClass\GenericClass\obj\Debug\net6.0\GenericClass.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CQ-Ruby\source\repos\GenericClass\GenericClass\obj\Debug\net6.0\GenericClass.AssemblyInfoInputs.cache
+C:\Users\CQ-Ruby\source\repos\GenericClass\GenericClass\obj\Debug\net6.0\GenericClass.AssemblyInfo.cs
+C:\Users\CQ-Ruby\source\repos\GenericClass\GenericClass\obj\Debug\net6.0\GenericClass.csproj.CoreCompileInputs.cache
+C:\Users\CQ-Ruby\source\repos\GenericClass\GenericClass\obj\Debug\net6.0\GenericClass.dll
+C:\Users\CQ-Ruby\source\repos\GenericClass\GenericClass\obj\Debug\net6.0\refint\GenericClass.dll
+C:\Users\CQ-Ruby\source\repos\GenericClass\GenericClass\obj\Debug\net6.0\GenericClass.pdb
+C:\Users\CQ-Ruby\source\repos\GenericClass\GenericClass\obj\Debug\net6.0\GenericClass.genruntimeconfig.cache
+C:\Users\CQ-Ruby\source\repos\GenericClass\GenericClass\obj\Debug\net6.0\ref\GenericClass.dll
