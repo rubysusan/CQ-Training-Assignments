@@ -16,10 +16,10 @@ namespace SQLConnection
                     string connectionString = "server=localhost, 1401;database=School;user id=sa;password=Pass@word;" +
 "TrustServerCertificate=true";
 
-        SqlConnection con = new SqlConnection(connectionString);
+        using SqlConnection con = new SqlConnection(connectionString);
         con.Open();
         string query = "AddStudent";
-        SqlCommand cmd = new SqlCommand(query, con);
+        using SqlCommand cmd = new SqlCommand(query, con);
         cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
         cmd.Parameters.Add("@sname", SqlDbType.VarChar, 30);
@@ -47,12 +47,12 @@ namespace SQLConnection
             string connectionString = "server=localhost, 1401;database=School;user id=sa;password=Pass@word;" +
 "TrustServerCertificate=true";
 
-            SqlConnection con = new SqlConnection(connectionString);
+            using SqlConnection con = new SqlConnection(connectionString);
             con.Open();
             string query = "GetStudent";
-            SqlCommand cmd = new SqlCommand(query, con);
+            using SqlCommand cmd = new SqlCommand(query, con);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            SqlDataReader reader = cmd.ExecuteReader();
+            using SqlDataReader reader = cmd.ExecuteReader();
             Console.WriteLine("Table Data:");
             while (reader.Read())
             {
