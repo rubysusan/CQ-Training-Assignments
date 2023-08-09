@@ -17,8 +17,8 @@ export class DetailComponent {
   @Input() event?:IEmployeeDetail
 
   @Output() hideComp=new EventEmitter<Event>();
-  hide(val:Event)
+  hide()
   {
-    this.hideComp.emit(val);
+    this.hideComp.emit();
   }
 }
