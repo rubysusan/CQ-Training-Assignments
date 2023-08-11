@@ -1,0 +1,2 @@
+<app-employee-list *ngIf="toShow"(eventChange)="onChange($event)"></app-employee-list>
+<app-detail *ngIf="!toShow"[event]="event" (hideComp)="hideEvent()" ></app-detail>
