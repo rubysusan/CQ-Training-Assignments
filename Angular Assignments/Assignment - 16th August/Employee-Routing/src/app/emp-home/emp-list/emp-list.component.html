@@ -1,0 +1,11 @@
+<h1 style="text-align: center;">EMPLOYEE DETAILS</h1>
+<table border="1px solid black" style="width:100%; margin:0;text-align: center;">
+    <tr bgcolor="#A9A9A9" height="50px">
+        <th><b>FIRST NAME</b></th>
+        <th><b>LAST NAME</b></th>
+    </tr>
+    <tr height="50px" *ngFor="let i of emp">
+        <td (click)="onClick(i)">{{i.firstname}}</td>
+        <td>{{i.lastname}}</td>
+    </tr>
+</table>

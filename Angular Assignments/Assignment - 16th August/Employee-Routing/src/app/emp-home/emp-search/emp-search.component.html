@@ -1,0 +1,20 @@
+<form [formGroup]="searchForm"(ngSubmit)="onSearch()">
+    <br>
+    <label>Enter Search Element:</label>
+    <input type="text" formControlName="searchVal">
+
+        
+        <button type="text">Search</button>
+    </form>
+    <br>
+    <table border="1px solid black" style="width:100%; margin:0;text-align: center;">
+        <tr bgcolor="#A9A9A9" height="50px">
+            <th><b>FIRST NAME</b></th>
+            <th><b>LAST NAME</b></th>
+        </tr>
+        <tr height="50px" *ngFor="let i of data">
+            <td (click)="onClick(i)">{{i.firstname}}</td>
+            <td>{{i.lastname}}</td>
+        </tr>
+    </table>
+    <div><br><button (click)="change()">Back</button></div>

@@ -1,0 +1,10 @@
+<h1 style="text-align: center;">DEPARTMENT DETAILS</h1>
+<table border="1px solid black" style="width:100%; margin:0;text-align: center;">
+    <tr bgcolor="#A9A9A9" height="50px">
+        <th><b>DEPARTMENT NAME</b></th>
+    </tr>
+    <tr height="50px" *ngFor="let i of depts">
+        <td (click)="onClick(i)">{{i.deptName}}</td>
+    </tr>
+</table>
+
