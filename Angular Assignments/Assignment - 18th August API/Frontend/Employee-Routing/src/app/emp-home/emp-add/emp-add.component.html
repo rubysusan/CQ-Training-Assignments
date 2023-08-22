@@ -1,5 +1,7 @@
 <form [formGroup]="empFG" (ngSubmit)="onSubmit()">
-    <br>
+  <label>ID:</label>
+    <input type="number" formControlName="id">
+    <br><br>
     <label>First Name:</label>
     <input type="text" formControlName="firstname">
     <br><br>

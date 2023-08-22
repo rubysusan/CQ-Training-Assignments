@@ -24,4 +24,12 @@ onAddClick() {
 onSearchClick() {
   this.router.navigate(['./employee/search'])
 }
+onDelClick()
+{
+  this.router.navigate(['./employee/delete'])
+}
+onUpdClick()
+{
+  this.router.navigate(['./employee/update'])
+}
 }

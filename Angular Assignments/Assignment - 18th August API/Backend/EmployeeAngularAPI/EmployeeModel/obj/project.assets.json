@@ -3515,11 +3515,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\CQ-Ruby\\source\\repos\\EmployeeAngularAPI\\EmployeeModel\\EmployeeModel.csproj",
+      "projectUniqueName": "C:\\github training assignments\\CQ-Training-Assignments\\Angular Assignments\\Assignment - 18th August API\\Backend\\EmployeeAngularAPI\\EmployeeModel\\EmployeeModel.csproj",
       "projectName": "EmployeeModel",
-      "projectPath": "C:\\Users\\CQ-Ruby\\source\\repos\\EmployeeAngularAPI\\EmployeeModel\\EmployeeModel.csproj",
+      "projectPath": "C:\\github training assignments\\CQ-Training-Assignments\\Angular Assignments\\Assignment - 18th August API\\Backend\\EmployeeAngularAPI\\EmployeeModel\\EmployeeModel.csproj",
       "packagesPath": "C:\\Users\\CQ-Ruby\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CQ-Ruby\\source\\repos\\EmployeeAngularAPI\\EmployeeModel\\obj\\",
+      "outputPath": "C:\\github training assignments\\CQ-Training-Assignments\\Angular Assignments\\Assignment - 18th August API\\Backend\\EmployeeAngularAPI\\EmployeeModel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\CQ-Ruby\\AppData\\Roaming\\NuGet\\NuGet.Config",

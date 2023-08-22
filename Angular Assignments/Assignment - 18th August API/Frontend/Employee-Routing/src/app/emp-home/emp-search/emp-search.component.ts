@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { IEmployeeDetail } from 'src/app/emp-home/IEmployeeDetail';
 import { EmpService } from 'src/app/emp-home/emp.service';
+import { EmployeeHttpService } from '../employee-http.service';
 
 @Component({
   selector: 'app-emp-search',
@@ -12,9 +13,9 @@ import { EmpService } from 'src/app/emp-home/emp.service';
 export class EmpSearchComponent implements OnInit {
   public name='';
   public emp: Array<IEmployeeDetail> = []
-  constructor(private empService: EmpService, private router: Router,
+  constructor(private empService: EmployeeHttpService, private router: Router,
     private activatedRoute: ActivatedRoute, private formBuilder: FormBuilder) {
-    this.emp = empService.employees;
+      this.empService.getEmployee().subscribe((data:Array<IEmployeeDetail>)=>{this.emp=data;})
   }
   searchForm=new FormGroup({searchVal:new FormControl('')});
   public val:string=';'

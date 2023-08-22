@@ -15,4 +15,14 @@ export class EmployeeHttpService {
   {
     return this.http.get<Array<IEmployeeDetail>>(this.baseURL+"SelectAll");
   }
+  public addEmployee(emp:IEmployeeDetail):Observable<boolean>
+  {    
+    return this.http.post<boolean>(this.baseURL+"InsertEmployee",emp)
+  }
+  public deleteEmployee(id:number):Observable<any>{
+    return this.http.delete(`${this.baseURL}DeleteByID?id=${id}`)
+  }
+  public updateEmployee(emp:IEmployeeDetail,id:number):Observable<any>{
+    return this.http.put(`${this.baseURL}UpdateByID?id=${id}`,emp)
+  }
 }

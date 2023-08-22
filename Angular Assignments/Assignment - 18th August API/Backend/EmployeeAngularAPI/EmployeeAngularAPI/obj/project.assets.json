@@ -3769,11 +3769,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\CQ-Ruby\\source\\repos\\EmployeeAngularAPI\\EmployeeAngularAPI\\EmployeeAngularAPI.csproj",
+      "projectUniqueName": "C:\\github training assignments\\CQ-Training-Assignments\\Angular Assignments\\Assignment - 18th August API\\Backend\\EmployeeAngularAPI\\EmployeeAngularAPI\\EmployeeAngularAPI.csproj",
       "projectName": "EmployeeAngularAPI",
-      "projectPath": "C:\\Users\\CQ-Ruby\\source\\repos\\EmployeeAngularAPI\\EmployeeAngularAPI\\EmployeeAngularAPI.csproj",
+      "projectPath": "C:\\github training assignments\\CQ-Training-Assignments\\Angular Assignments\\Assignment - 18th August API\\Backend\\EmployeeAngularAPI\\EmployeeAngularAPI\\EmployeeAngularAPI.csproj",
       "packagesPath": "C:\\Users\\CQ-Ruby\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CQ-Ruby\\source\\repos\\EmployeeAngularAPI\\EmployeeAngularAPI\\obj\\",
+      "outputPath": "C:\\github training assignments\\CQ-Training-Assignments\\Angular Assignments\\Assignment - 18th August API\\Backend\\EmployeeAngularAPI\\EmployeeAngularAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\CQ-Ruby\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3791,8 +3791,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\CQ-Ruby\\source\\repos\\EmployeeAngularAPI\\EmployeeRepository\\EmployeeRepository.csproj": {
-              "projectPath": "C:\\Users\\CQ-Ruby\\source\\repos\\EmployeeAngularAPI\\EmployeeRepository\\EmployeeRepository.csproj"
+            "C:\\github training assignments\\CQ-Training-Assignments\\Angular Assignments\\Assignment - 18th August API\\Backend\\EmployeeAngularAPI\\EmployeeRepository\\EmployeeRepository.csproj": {
+              "projectPath": "C:\\github training assignments\\CQ-Training-Assignments\\Angular Assignments\\Assignment - 18th August API\\Backend\\EmployeeAngularAPI\\EmployeeRepository\\EmployeeRepository.csproj"
             }
           }
         }

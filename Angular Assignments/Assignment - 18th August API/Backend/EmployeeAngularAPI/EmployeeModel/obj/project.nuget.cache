@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hCDfJ6dpSB522W73pRKBkTrhdkcgg1b+u0kcXbz0TGyPuAXd8FMMmkqE0/IjXbV4FJDxecqaKF/5sY01JToMwA==",
+  "dgSpecHash": "4HtBWxxnnfeFbY4va0r+OOPtWVoQGOyVN5t7alSjKST1pXAmwQ6aYhaFSR0Ju3YUo0KCRUl6zwWzg+Jxs0XhNA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\CQ-Ruby\\source\\repos\\EmployeeAngularAPI\\EmployeeModel\\EmployeeModel.csproj",
+  "projectFilePath": "C:\\github training assignments\\CQ-Training-Assignments\\Angular Assignments\\Assignment - 18th August API\\Backend\\EmployeeAngularAPI\\EmployeeModel\\EmployeeModel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\CQ-Ruby\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\CQ-Ruby\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

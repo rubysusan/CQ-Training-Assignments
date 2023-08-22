@@ -1,0 +1,28 @@
+<form [formGroup]="empFG" (ngSubmit)="onSubmit()">
+    <label>ID:</label>
+      <input type="number" formControlName="id">
+      <br><br>
+      <label>First Name:</label>
+      <input type="text" formControlName="firstname">
+      <br><br>
+      <label>Last Name:</label>
+      <input type="text" formControlName="lastname">
+      <br><br>
+      <label>Date of Birth:</label>
+      <input type="date" formControlName="dateofbirth">
+      <br><br>
+      <label>Age:</label>
+      <input type="number" formControlName="age">
+      <br><br>
+      <label>Date of Joining:</label>
+      <input type="date" formControlName="joiningdate">
+      <br><br>
+      <label>Country:</label>
+      <input type="text" formControlName="country">
+      
+      <div>
+        <br>
+        <button type="submit">Update</button>
+      </div>
+    </form>
+    <div><br><button (click)="onViewClick()">View</button><button (click)="change()">Back</button></div>

@@ -2,8 +2,8 @@ export interface IEmployeeDetail {
     id: number;
     firstName : string;
     lastName : string;
-    dateOfBirth : Date;
+    dateOfBirth : string;
     age : number;
-    dateOfJoining : Date;
+    dateOfJoining : string;
     country : string;
 }

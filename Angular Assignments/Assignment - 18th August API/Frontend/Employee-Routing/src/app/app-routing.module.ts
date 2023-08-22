@@ -6,6 +6,9 @@ import { EmpDetailComponent } from './emp-home/emp-detail/emp-detail.component';
 import { EmpSearchComponent } from './emp-home/emp-search/emp-search.component';
 import { EmpAddComponent } from './emp-home/emp-add/emp-add.component';
 import { EmpHomeComponent } from './emp-home/emp-home.component';
+import { EmpDeleteComponent } from './emp-home/emp-delete/emp-delete.component';
+import { EmpUpdateComponent } from './emp-home/emp-update/emp-update.component';
+import { EmpUpdateFormComponent } from './emp-home/emp-update-form/emp-update-form.component';
 
 const routes: Routes = [{
   path: 'employee',
@@ -25,6 +28,16 @@ const routes: Routes = [{
       },
       {
         path: 'search', component: EmpSearchComponent
+    },
+    {
+      path: 'delete', component: EmpDeleteComponent
+  },
+  {
+    path: 'update', component: EmpUpdateComponent
+},
+
+      {
+          path: ':id/update', component: EmpUpdateFormComponent
     }
   ]
 },

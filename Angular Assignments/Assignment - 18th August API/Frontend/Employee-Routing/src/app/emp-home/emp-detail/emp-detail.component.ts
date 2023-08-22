@@ -16,16 +16,19 @@ export class EmpDetailComponent {
 
   constructor(private empService: EmployeeHttpService, private route: ActivatedRoute,
       private router: Router) {
-        this.empService.getEmployee().subscribe((data:Array<IEmployeeDetail>)=>{this.empList=data;})
-  }
-      ngOnInit(): void {
+        this.empService.getEmployee().subscribe((data:Array<IEmployeeDetail>)=>{this.empList=data;
           console.log(this.route);
           const id: string = this.route.snapshot.params['id'];
           this.employeeId = Number(id);
           console.log(this.employeeId);
-          this.detailsofEmp = this.empList.find((emp) => emp.id === this.employeeId)
+          this.detailsofEmp = this.empList.find((emp) => emp.id == this.employeeId)})
+  }
+      ngOnInit(): void {
+          
       }
-  
+      onViewClick() {
+        this.router.navigate(['./employee/list'])
+      }
   change()
   {
     this.router.navigate(['./employee']);
