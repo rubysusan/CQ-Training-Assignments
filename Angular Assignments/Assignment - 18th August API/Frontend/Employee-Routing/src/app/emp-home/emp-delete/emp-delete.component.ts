@@ -20,7 +20,10 @@ export class EmpDeleteComponent {
     this.empService.getEmployee().subscribe((data:Array<IEmployeeDetail>)=>{this.emp=data;})
     console.log(this.emp)
   }
-
+getData()
+{
+  this.empService.getEmployee().subscribe((data:Array<IEmployeeDetail>)=>{this.emp=data;})
+}
  
   
   onClick(value : IEmployeeDetail): void
@@ -31,7 +34,7 @@ export class EmpDeleteComponent {
   }
   onDelete(value:number)
   {
-    this.empService.deleteEmployee(value).subscribe(data=>{console.log(data)})
+    this.empService.deleteEmployee(value).subscribe(data=>{this.getData()})
     alert('Data Deleted')
   }
   onViewClick() {
