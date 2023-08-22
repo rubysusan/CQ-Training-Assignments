@@ -1,0 +1,17 @@
+C:\Users\CQ-Ruby\source\repos\EmployeeAngularAPI\EmployeeRepository\bin\Debug\net6.0\EmployeeRepository.deps.json
+C:\Users\CQ-Ruby\source\repos\EmployeeAngularAPI\EmployeeRepository\bin\Debug\net6.0\EmployeeRepository.runtimeconfig.json
+C:\Users\CQ-Ruby\source\repos\EmployeeAngularAPI\EmployeeRepository\bin\Debug\net6.0\EmployeeRepository.dll
+C:\Users\CQ-Ruby\source\repos\EmployeeAngularAPI\EmployeeRepository\bin\Debug\net6.0\EmployeeRepository.pdb
+C:\Users\CQ-Ruby\source\repos\EmployeeAngularAPI\EmployeeRepository\bin\Debug\net6.0\EmployeeModel.dll
+C:\Users\CQ-Ruby\source\repos\EmployeeAngularAPI\EmployeeRepository\bin\Debug\net6.0\EmployeeModel.pdb
+C:\Users\CQ-Ruby\source\repos\EmployeeAngularAPI\EmployeeRepository\obj\Debug\net6.0\EmployeeRepository.csproj.AssemblyReference.cache
+C:\Users\CQ-Ruby\source\repos\EmployeeAngularAPI\EmployeeRepository\obj\Debug\net6.0\EmployeeRepository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CQ-Ruby\source\repos\EmployeeAngularAPI\EmployeeRepository\obj\Debug\net6.0\EmployeeRepository.AssemblyInfoInputs.cache
+C:\Users\CQ-Ruby\source\repos\EmployeeAngularAPI\EmployeeRepository\obj\Debug\net6.0\EmployeeRepository.AssemblyInfo.cs
+C:\Users\CQ-Ruby\source\repos\EmployeeAngularAPI\EmployeeRepository\obj\Debug\net6.0\EmployeeRepository.csproj.CoreCompileInputs.cache
+C:\Users\CQ-Ruby\source\repos\EmployeeAngularAPI\EmployeeRepository\obj\Debug\net6.0\EmployeeRepository.csproj.CopyComplete
+C:\Users\CQ-Ruby\source\repos\EmployeeAngularAPI\EmployeeRepository\obj\Debug\net6.0\EmployeeRepository.dll
+C:\Users\CQ-Ruby\source\repos\EmployeeAngularAPI\EmployeeRepository\obj\Debug\net6.0\refint\EmployeeRepository.dll
+C:\Users\CQ-Ruby\source\repos\EmployeeAngularAPI\EmployeeRepository\obj\Debug\net6.0\EmployeeRepository.pdb
+C:\Users\CQ-Ruby\source\repos\EmployeeAngularAPI\EmployeeRepository\obj\Debug\net6.0\EmployeeRepository.genruntimeconfig.cache
+C:\Users\CQ-Ruby\source\repos\EmployeeAngularAPI\EmployeeRepository\obj\Debug\net6.0\ref\EmployeeRepository.dll
