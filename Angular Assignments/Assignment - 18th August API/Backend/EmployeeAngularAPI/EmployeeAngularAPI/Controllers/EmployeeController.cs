@@ -32,10 +32,30 @@ namespace EmployeeAngularAPI.Controllers
             return Ok(dbContext?.Employees.Find(id));
         }
         [HttpGet("SelectAll")]
-        [EnableCors("AllowOrigin")]
+        
         public IActionResult get()
         {
             return Ok(dbContext?.Employees);
+        }
+        [HttpDelete("DeleteByID")]
+        public void delete(int id)
+        {
+            Employee employee = new Employee();
+            employee.Id = id;
+            dbContext?.Remove(employee);
+            dbContext?.SaveChanges();
+        }
+        [HttpPut("UpdateByID")]
+        public void put(Employee emp, int id)
+        {
+            var updateEmp = dbContext?.Employees.FirstOrDefault(x => x.Id.Equals(id));
+            updateEmp.FirstName = emp.FirstName;
+            updateEmp.LastName = emp.LastName;
+            updateEmp.DateOfBirth = emp.DateOfBirth;
+            updateEmp.Age = emp.Age;
+            updateEmp.DateOfJoining = emp.DateOfJoining;
+            updateEmp.Country = emp.Country;
+            dbContext?.SaveChanges();
         }
 
     }
