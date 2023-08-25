@@ -55,6 +55,7 @@ export class EmpUpdateFormComponent {
     this.newEmp.country=tempEmp.country;
     this.empService.updateEmployee(this.newEmp,id).subscribe(data=>{console.log(data)})
     alert('Data Updated')
+    
   }
   onViewClick() {
     this.router.navigate(['./employee/list'])
